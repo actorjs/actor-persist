@@ -32,7 +32,7 @@ actorSystem.setPersistenceProvider(<Provider>);
 
 Local/Session Storage
 ---------------------
-This class can only be used in the browser to persist events in the local or session storage. It has one construct parameter which can be 'local' or 'session'.
+This class can be used in the browser to persist events in the local or session storage. It has one construct parameter which can be 'local' or 'session'.
 ```
 var provider = new actorPersist.PersistLocalStorage("local");
 actorSystem.setPersistenceProvider(provider);
