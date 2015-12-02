@@ -1,8 +1,12 @@
 {
   "name": "actorjs-persist",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "ActorJs Core",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/actorjs/actorjs-persist.git"
+  },
   "devDependencies": {
     "express": "^4.13.3",
     "gulp": "^3.9.0",
