@@ -1,3 +1,5 @@
 module.exports = {
-    PersistLocalStorage: require("./src/PersistLocalStorage")
+    PersistFile: require("./src/PersistFile"),
+    PersistStorage: require("./src/PersistStorage"),
+    PersistXMLHttp: require("./src/PersistXMLHttp")
 }

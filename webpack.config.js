@@ -5,6 +5,9 @@ module.exports = {
         filename: "bundle.js",
         library: ["actorjs", "persist"]
     },
+    node: {
+        fs: "empty"
+    },
     module: {
         loaders: [
             { test: /\.css$/, loader: "style!css" }

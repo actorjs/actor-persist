@@ -1,7 +1,9 @@
 'use strict';
 
 var gulp = require('gulp');
+var gutil = require('gulp-util');
 var webpack = require("webpack");
+var babel = require("gulp-babel");
 
 var webpackConfig = require("./webpack.config");
 
@@ -15,4 +17,10 @@ gulp.task("webpack", function(callback) {
         }));
         callback();
     });
+});
+
+gulp.task("babel", function () {
+    return gulp.src("src/app.js")
+        .pipe(babel())
+        .pipe(gulp.dest("dist"));
 });
