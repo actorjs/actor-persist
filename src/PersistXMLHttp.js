@@ -2,7 +2,7 @@ var PersistXMLHttp = function (url) {
     this.url = url;
 };
 
-PersistXMLHttp.prototype.read = function(id, callback){
+PersistXMLHttp.prototype.read = function(actor, callback){
 
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
@@ -11,7 +11,7 @@ PersistXMLHttp.prototype.read = function(id, callback){
             callback(events);
         }
     };
-    xhttp.open("GET", this.url + "?id=" + id, true);
+    xhttp.open("GET", this.url + "?id=" + actor.id, true);
     xhttp.send();
 }
 

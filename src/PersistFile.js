@@ -6,7 +6,7 @@ var PersistFile = function (file) {
     this.file = file;
 };
 
-PersistFile.prototype.read = function (id, callback) {
+PersistFile.prototype.read = function (actor, callback) {
 
     var list = [];
     readline
@@ -17,8 +17,8 @@ PersistFile.prototype.read = function (id, callback) {
         })
         .on('line', function (line) {
             var event = JSON.parse(line);
-            console.log(event, id)
-            if(event.id === id)
+            console.log(event, actor.id)
+            if(event.id === actor.id)
                 list.push(event);
         })
         .on('close', function (line) {

@@ -9,11 +9,9 @@ var PersistLocalStorage = function (type) {
         this.storage = sessionStorage
 };
 
-PersistLocalStorage.prototype.read = function (id, callback) {
-
+PersistLocalStorage.prototype.read = function (actor, callback) {
     var events = JSON.parse(localStorage.getItem('actorjs'));
     callback(events);
-
 };
 
 PersistLocalStorage.prototype.write = function (event, callback) {

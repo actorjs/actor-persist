@@ -63,7 +63,9 @@ describe('ActorPersist', function () {
 function testPersist(persist, done) {
 
     var event = {
-        id: 123,
+        actor:{
+            id: 123
+        },
         message: {
             test: "TEST"
         }
